@@ -1,6 +1,6 @@
 {
   "name": "brain-games-dark-chocolate",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "console-game",
   "main": "dist/index.js",
   "bin": {
@@ -26,5 +26,8 @@
     "@babel/core": "^7.2.0",
     "@babel/node": "^7.2.0",
     "@babel/preset-env": "^7.2.0"
+  },
+  "dependencies": {
+    "readline-sync": "^1.4.9"
   }
 }
