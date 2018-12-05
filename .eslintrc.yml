@@ -1,7 +1,4 @@
 
-plagins:
-  - import
-
 env:
   node: true
 
