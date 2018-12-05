@@ -2,7 +2,6 @@
   "name": "brain-games-dark-chocolate",
   "version": "1.0.3",
   "description": "console-game",
-  "main": "dist/index.js",
   "bin": {
     "brain-games": "dist/bin/brain-games.js"
   },
