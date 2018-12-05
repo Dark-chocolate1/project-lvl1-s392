@@ -1,11 +1,15 @@
----
-plagins
-	- import
+
+plagins:
+  - import
+
 env:
-	node: true
+  node: true
+
 parser:
-	babel-eslint
+  babel-eslint
+
 extends:
-	- 'airbnb-base'
+  - 'airbnb-base'
+
 rules:
-	no-console: 0
+  no-console: 0
