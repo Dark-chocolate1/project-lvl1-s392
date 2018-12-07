@@ -1,28 +1,16 @@
-import readlineSync from 'readline-sync';
-import welcome from '..';
+import { cons } from 'hexlet-pairs';
+import engineGame from '../engine-games';
 
-const generateRandomNum = () => Math.floor(Math.random() * 100);
+const descriptionTask = 'Answer "yes" if number even otherwise answer "no".';
+
+const generateQuestion = () => Math.floor(Math.random() * 100);
 
 const isEven = number => number % 2 === 0;
 
-export default () => {
-  const userName = welcome();
-  console.log(`Hello, ${userName}!`);
-  for (let countCorrectAnswer = 1; countCorrectAnswer <= 3; countCorrectAnswer += 1) {
-    const question = generateRandomNum();
-    console.log(`Question: ${question}`);
-    const userAnswer = readlineSync.question();
-    const correctAnswer = isEven(question) ? 'yes' : 'no';
-    if (userAnswer === correctAnswer) {
-      console.log(`Your answer: ${userAnswer} \n Correct!`);
-    } else {
-      console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.`);
-      console.log(`Let's try again, ${userName}!`);
-      return;
-    }
-  }
-  console.log(`Congragulations, ${userName}`);
+const generateAnswerOnQuestion = () => {
+  const question = generateQuestion();
+  const userAnswer = isEven(question) ? 'yes' : 'no';
+  return cons(question, userAnswer);
 };
 
-console.log('Welcome to the Brain Games!');
-console.log('Answer "yes" if number even otherwise answer "no".');
+export default () => engineGame(generateAnswerOnQuestion, descriptionTask);
