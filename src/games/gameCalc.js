@@ -1,5 +1,7 @@
-import readlineSync from 'readline-sync';
-import welcome from '..';
+import { cons } from 'hexlet-pairs';
+import engineGame from '../engine-games';
+
+const descriptionTask = 'What is the result of the expression?';
 
 const generationRandomSign = () => {
   let sign = '';
@@ -19,7 +21,7 @@ const generationRandomSign = () => {
   return sign;
 };
 
-const generateRandomNum = () => Math.floor(Math.random() * 100);
+const generateQuestion = () => Math.floor(Math.random() * 100);
 
 const resultWithNumbers = (sign, number1, number2) => {
   let result = 0;
@@ -34,31 +36,18 @@ const resultWithNumbers = (sign, number1, number2) => {
       result = number1 * number2;
       break;
     default:
-      return null;
+      return;
   }
   return result;
 };
 
-export default () => {
-  const userName = welcome();
-  console.log(`Hello, ${userName}!`);
-  for (let countCorrectAnswer = 1; countCorrectAnswer <= 3; countCorrectAnswer += 1) {
-    const number1 = generateRandomNum();
-    const number2 = generateRandomNum();
-    const randomSign = generationRandomSign();
-    console.log(`Question: ${number1} ${randomSign} ${number2}`);
-    const userAnswer = Number(readlineSync.question());
-    const correctAnswer = resultWithNumbers(randomSign, number1, number2);
-    if (userAnswer === correctAnswer) {
-      console.log(`Your answer: ${userAnswer} \n Correct!`);
-    } else {
-      console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.`);
-      console.log(`Let's try again, ${userName}!`);
-      return;
-    }
-  }
-  console.log(`Congragulations, ${userName}`);
+const generateAnswerOnQuestion = () => {
+  const number1 = generateQuestion();
+  const number2 = generateQuestion();
+  const sign = generationRandomSign();
+  const question = `${number1} ${sign} ${number2}`;
+  const userAnswer = resultWithNumbers(sign, number1, number2);
+  return cons(question, `${userAnswer}`);
 };
 
-console.log('Welcome to the Brain Games!');
-console.log('What is the result of the expression?');
+export default () => engineGame(generateAnswerOnQuestion, descriptionTask);

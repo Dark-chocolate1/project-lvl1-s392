@@ -4,3 +4,7 @@
 
 ## Install package and start globally brain-even
 [![asciicast](https://asciinema.org/a/5LnGY67qJd6mm05443OcZwjAu.svg)](https://asciinema.org/a/5LnGY67qJd6mm05443OcZwjAu)
+
+
+## Install package and start globally brain-calc
+[![asciicast](https://asciinema.org/a/KVKl4vfn96OkvTrnXuni0vjqi.svg)](https://asciinema.org/a/KVKl4vfn96OkvTrnXuni0vjqi)
