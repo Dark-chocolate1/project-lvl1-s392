@@ -1,5 +1,7 @@
 install:
 	npm install
+start-gcd:
+	npx babel-node -- src/bin/brain-gcd.js
 start-calc:
 	npx babel-node -- src/bin/brain-calc.js
 start-even:

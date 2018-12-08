@@ -8,3 +8,6 @@
 
 ## Install package and start globally brain-calc
 [![asciicast](https://asciinema.org/a/KVKl4vfn96OkvTrnXuni0vjqi.svg)](https://asciinema.org/a/KVKl4vfn96OkvTrnXuni0vjqi)
+
+## Install package and start globally brain-gcd
+[![asciicast](https://asciinema.org/a/tpiKpQ20KTbnlbRzXvSGy6LId.svg)](https://asciinema.org/a/tpiKpQ20KTbnlbRzXvSGy6LId)
