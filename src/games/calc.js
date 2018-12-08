@@ -15,18 +15,18 @@ const generateAnswerOnQuestion = () => {
   const mathSignRandom = generatMathSignRandom();
   const question = `${number1} ${mathSignRandom} ${number2}`;
 
-  let userAnswer = 0;
+  let correctAnswer = 0;
   switch (mathSignRandom) {
     case '+':
-      userAnswer = number1 + number2;
+      correctAnswer = number1 + number2;
       break;
     case '-':
-      userAnswer = number1 - number2;
+      correctAnswer = number1 - number2;
       break;
-    default: userAnswer = number1 * number2;
+    default: correctAnswer = number1 * number2;
       break;
   }
-  return cons(question, `${userAnswer}`);
+  return cons(question, `${correctAnswer}`);
 };
 
 export default () => engineGame(generateAnswerOnQuestion, descriptionTask);

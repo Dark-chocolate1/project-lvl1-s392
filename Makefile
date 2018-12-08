@@ -1,6 +1,8 @@
 install:
 	npm install
 start-progression:
+		npx babel-node -- src/bin/brain-prime.js
+start-progression:
 	npx babel-node -- src/bin/brain-progression.js
 start-gcd:
 	npx babel-node -- src/bin/brain-gcd.js

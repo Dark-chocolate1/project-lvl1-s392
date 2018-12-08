@@ -10,8 +10,8 @@ const isEven = number => number % 2 === 0;
 
 const generateAnswerOnQuestion = () => {
   const question = generateNamberRandom(maxNumberRandom);
-  const userAnswer = isEven(question) ? 'yes' : 'no';
-  return cons(question, userAnswer);
+  const correctAnswer = isEven(question) ? 'yes' : 'no';
+  return cons(question, correctAnswer);
 };
 
 export default () => engineGame(generateAnswerOnQuestion, descriptionTask);

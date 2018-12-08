@@ -15,8 +15,8 @@ const generateAnswerOnQuestion = () => {
   const number1 = generateNamberRandom(maxNumberRandom);
   const number2 = generateNamberRandom(maxNumberRandom);
   const question = `${number1} ${number2}`;
-  const userAnswer = findGcd(number1, number2);
-  return cons(question, `${userAnswer}`);
+  const correctAnswer = findGcd(number1, number2);
+  return cons(question, `${correctAnswer}`);
 };
 
 export default () => engineGame(generateAnswerOnQuestion, descriptionTask);
