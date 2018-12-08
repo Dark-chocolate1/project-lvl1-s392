@@ -7,11 +7,12 @@ export const greetingUser = () => {
   return userName;
 };
 
+const countCorrectAnswer = 3;
+
 export default (generateAnswerOnQuestion, descriptionTask) => {
   console.log('Welcome to the Brain Games!');
   console.log(descriptionTask);
   const userName = greetingUser();
-  const countCorrectAnswer = 3;
   for (let countAnswer = 1; countAnswer <= countCorrectAnswer; countAnswer += 1) {
     const generateAnswer = generateAnswerOnQuestion();
     const question = car(generateAnswer);

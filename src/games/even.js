@@ -1,14 +1,15 @@
 import { cons } from 'hexlet-pairs';
 import engineGame from '../engine-games';
+import generateNamberRandom from '../utils';
 
 const descriptionTask = 'Answer "yes" if number even otherwise answer "no".';
 
-const generateQuestion = () => Math.floor(Math.random() * 100);
+const maxNumberRandom = 50;
 
 const isEven = number => number % 2 === 0;
 
 const generateAnswerOnQuestion = () => {
-  const question = generateQuestion();
+  const question = generateNamberRandom(maxNumberRandom);
   const userAnswer = isEven(question) ? 'yes' : 'no';
   return cons(question, userAnswer);
 };

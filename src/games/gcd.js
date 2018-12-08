@@ -1,20 +1,21 @@
 import { cons } from 'hexlet-pairs';
 import engineGame from '../engine-games';
+import generateNamberRandom from '../utils';
 
 const descriptionTask = 'Find the greatest common divisor of given numbers.';
 
-const generateQuestion = () => Math.floor(Math.random() * 100);
+const maxNumberRandom = 50;
 
-const resultWithNumbers = (number1, number2) => {
+const findGcd = (number1, number2) => {
   if (number2 === 0) return number1;
-  return resultWithNumbers(number2, number1 % number2);
+  return findGcd(number2, number1 % number2);
 };
 
 const generateAnswerOnQuestion = () => {
-  const number1 = generateQuestion();
-  const number2 = generateQuestion();
+  const number1 = generateNamberRandom(maxNumberRandom);
+  const number2 = generateNamberRandom(maxNumberRandom);
   const question = `${number1} ${number2}`;
-  const userAnswer = resultWithNumbers(number1, number2);
+  const userAnswer = findGcd(number1, number2);
   return cons(question, `${userAnswer}`);
 };
 

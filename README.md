@@ -11,3 +11,6 @@
 
 ## Install package and start globally brain-gcd
 [![asciicast](https://asciinema.org/a/tpiKpQ20KTbnlbRzXvSGy6LId.svg)](https://asciinema.org/a/tpiKpQ20KTbnlbRzXvSGy6LId)
+
+## Install package and start globally brain-progression
+[![asciicast](https://asciinema.org/a/H021NBfk2rmx8euBzO6q5lPNP.svg)](https://asciinema.org/a/H021NBfk2rmx8euBzO6q5lPNP)
