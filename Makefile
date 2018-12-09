@@ -1,6 +1,6 @@
 install:
 	npm install
-start-progression:
+start-prime:
 		npx babel-node -- src/bin/brain-prime.js
 start-progression:
 	npx babel-node -- src/bin/brain-progression.js

@@ -14,3 +14,6 @@
 
 ## Install package and start globally brain-progression
 [![asciicast](https://asciinema.org/a/cZh5n8SQNyDhXDTCVR8tVjsm7.svg)](https://asciinema.org/a/cZh5n8SQNyDhXDTCVR8tVjsm7)
+
+## Install package and start globally brain-prime
+[![asciicast](https://asciinema.org/a/T74aiodc5fJRD9wlw8EuXvHiz.svg)](https://asciinema.org/a/T74aiodc5fJRD9wlw8EuXvHiz)
