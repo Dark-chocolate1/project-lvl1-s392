@@ -5,9 +5,9 @@ import generateNamberRandom from '../utils';
 const descriptionTask = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
 const maxNumberRandom = 100;
-const minNumberPrime = 2;
 
 const isPrime = (number) => {
+  const minNumberPrime = 2;
   if (number < minNumberPrime) return false;
 
   const iter = (i) => {
